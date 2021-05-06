@@ -4,7 +4,6 @@ const { REACT_APP_OPENWEATHER_API } = process.env;
 
 function fetchRequest(path, options) {
   const url = `${BASE_URL}${path}&appid=${REACT_APP_OPENWEATHER_API}`;
-  console.log('tried', url)
   return fetch(url, options)
     .then(res => res.ok ? res : Promise.reject())
     .then(response => response.json())
