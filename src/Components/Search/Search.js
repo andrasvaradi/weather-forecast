@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './search.css'
+import './search.css';
+import { Hint } from 'react-autocomplete-hint';
 
 const SearchBar = ({setCity}) => {
   const [searchTerm, setSearchTerm] = useState('');
