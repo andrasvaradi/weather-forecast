@@ -8,15 +8,19 @@ import City from './Components/City/City';
 function App() {
   const [weather, setWeather] = useState([])
   const [city, setCity] = useState(null)
+  const [shown, setShown] = useState([])
 
   useEffect(() => {
-    if (city) {
-      getWeatherForecast(city).then(res => setWeather([...weather, res])).then(
+    if (city && !shown.includes(city)) {
+      getWeatherForecast(city).then(res => setWeather([...weather, res])).then(() => {
+        setShown([...shown, city])
         setCity(null)
+      }
       )
     }
   }, [city])
   console.log(weather)
+  console.log(shown)
   return (
     <div className="App">
       <div className="app-container">

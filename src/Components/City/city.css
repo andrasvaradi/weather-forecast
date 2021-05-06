@@ -1,4 +1,6 @@
 .city-weather {
-  width: 80%;
-  background-color: white;
+  width: 95%;
+  height: 10em;
+  background-color: rgba(255, 255, 255, 0.577);
+  border-radius: 0.5em;
 }
