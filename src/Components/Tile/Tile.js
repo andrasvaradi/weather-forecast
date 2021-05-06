@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './tile.css'
 import moment from 'moment';
 import ReactAnimatedWeather from 'react-animated-weather';
@@ -7,7 +7,7 @@ const Tile = ({ data }) => {
 
   const displayWeatherIcon = () => {
     switch(data.weather[0].main) {
-      
+
       case 'Clouds':
         return 'CLOUDY'
       case 'Rain':
@@ -27,7 +27,6 @@ const Tile = ({ data }) => {
 
   return (
     <div className="tile">
-
       <div>{moment(data.dt_txt).format('dddd')}</div>
       <div>{moment(data.dt_txt).format('LT')}</div>
       <div>{data.weather[0].main}</div>

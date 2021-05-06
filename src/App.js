@@ -12,11 +12,14 @@ function App() {
 
   useEffect(() => {
     if (city && !shown.includes(city)) {
-      getWeatherForecast(city).then(res => setWeather([...weather, res])).then(() => {
+      getWeatherForecast(city).then(res => {
+        if (res.cod !== '200') throw new Error()
+        setWeather([...weather, res])
+        }).then(() => {
         setShown([...shown, city])
         setCity(null)
       }
-      )
+      ).catch(() => alert('Something went wrong'))
     }
   }, [city])
   console.log(weather)

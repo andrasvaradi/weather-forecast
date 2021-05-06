@@ -12,6 +12,7 @@ const SearchBar = ({ setCity }) => {
   const handleClick = (e) => {
     e.preventDefault();
     setCity(searchTerm.toLowerCase());
+    e.target.value = '';
   };
 
   const handleKeyDown = (e) => {
@@ -20,11 +21,6 @@ const SearchBar = ({ setCity }) => {
       e.target.value = '';
     }
   };
-  useEffect(() => {
-    if (searchTerm) {
-
-    }
-  }, [searchTerm]);
 
   return (
     <div className="search">

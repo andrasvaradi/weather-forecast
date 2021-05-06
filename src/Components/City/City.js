@@ -17,10 +17,6 @@ const City = ({data}) => {
     }
   }
 
-  useEffect(() => {
-
-  }, []);
-
   return (
     <div className="city-weather">
         <h1>{data.city.name}</h1>

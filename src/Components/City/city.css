@@ -9,3 +9,26 @@
   padding: 0.5em;
   margin: 0.5em;
 }
+.city-weather:hover {
+  margin: 1em;
+  transition: 0.4s linear;
+  cursor: pointer;
+}
+
+input, button {
+  border:none;
+}
+
+.back-button, .forward-button {
+  width: 2em;
+  height: 2em;
+  cursor: pointer;
+  padding: 0.5em;
+  border-radius: 1em;
+}
+
+button:hover {
+  width: 2.1em;
+  height: 2.1em;
+  background-color: rgba(0, 0, 0, 0.153);
+}
