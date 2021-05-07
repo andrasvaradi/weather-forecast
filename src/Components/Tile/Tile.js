@@ -26,7 +26,7 @@ const Tile = ({ data }) => {
   }
 
   return (
-    <div className="tile">
+    <div className="tile" data-testid="tile-test">
       <div>{moment(data.dt_txt).format('dddd')}</div>
       <div>{moment(data.dt_txt).format('LT')}</div>
       <div>{data.weather[0].main}</div>

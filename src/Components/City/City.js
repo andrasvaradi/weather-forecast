@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './city.css'
 import Tile from '../Tile/Tile';
 
@@ -18,11 +18,11 @@ const City = ({data}) => {
   }
 
   return (
-    <div className="city-weather">
+    <div className="city-weather" data-testid="city-test">
         <h1>{data.city.name}</h1>
-        <button className="back-button" value="back" onClick={handleClick}>{'<'}</button>
+        <button className="back-button" value="back" data-testid="back-button-test" onClick={handleClick}>{'<'}</button>
         {data.list.slice(start,end).map((el,i) => <Tile key={i} data={el} />)}
-        <button className="forward-button" value="forward" onClick={handleClick}>{'>'}</button>
+        <button className="forward-button" data-testid="forward-button-test" value="forward" onClick={handleClick}>{'>'}</button>
     </div>
   )
 }

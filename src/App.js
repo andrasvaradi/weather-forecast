@@ -26,7 +26,7 @@ function App() {
   console.log(shown)
   return (
     <div className="App">
-      <div className="app-container">
+      <div className="app-container" data-testid="application">
         <SearchBar setCity={setCity} />
         <div className="city-list">
 

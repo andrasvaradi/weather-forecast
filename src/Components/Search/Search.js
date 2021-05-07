@@ -23,18 +23,24 @@ const SearchBar = ({ setCity }) => {
   };
 
   return (
-    <div className="search">
+    <div className="search" data-testid="search-test">
       <div className="hint-container">
         <Hint className="hint" options={cities} allowTabFill>
           <input
             className="search-input"
             placeholder="City name goes here"
             onKeyDown={handleKeyDown}
-            onChange={handleChange}>
+            onChange={handleChange}
+            data-testid="search-input"
+            >
           </input>
         </Hint>
       </div>
-      <button className="search-button" onClick={handleClick}>Search</button>
+      <button 
+      className="search-button" 
+      onClick={handleClick}
+      data-testid="search-button"
+      >Search</button>
     </div>
   )
 }
