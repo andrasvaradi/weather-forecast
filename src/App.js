@@ -22,8 +22,7 @@ function App() {
       ).catch(() => alert('Something went wrong'))
     }
   }, [city])
-  console.log(weather)
-  console.log(shown)
+
   return (
     <div className="App">
       <div className="app-container" data-testid="application">
